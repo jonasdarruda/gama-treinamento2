@@ -1,14 +1,14 @@
-import java.nio.file.ClosedWatchServiceException;
+
 import java.util.Scanner;
 
-import javax.swing.event.SwingPropertyChangeSupport;
+
 
 public class Exercicio02 {
 
     public static void main(String[] args){
-        Scanner teclado new Scanner(System.in);
+        Scanner teclado = new Scanner(System.in);
 
-        double salario, prestacao, emprestimo
+        double salario, prestacao, emprestimo;
 
         System.out.println("Digite o valor do salario ");
         salario = teclado.nextDouble();
@@ -22,6 +22,8 @@ public class Exercicio02 {
             System.out.println("Você pode receber o emprestimo ");
         } else {
             System.out.println( "Você não pode receber o emprestimo");
+
+            
         }
 
 
