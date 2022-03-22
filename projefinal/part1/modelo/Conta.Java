@@ -1,9 +1,14 @@
+package part1.main.modelo;
+
+
+
 abstract class Conta {
-    private int numero, saldo ;
+    private int numero;
+    private double saldo;
     
 
 
-    public Conta(int numero, int saldo){
+    public Conta(int numero, double saldo){
         this.numero = numero;
         this.saldo = saldo;
     }
@@ -14,18 +19,18 @@ abstract class Conta {
 
     }
 
-    public int deposita(double valorDeposito){
+    public double deposita(double valorDeposito){
         this.saldo + = valorDeposito;
         return saldo;
 
     }
 
-    public int saque(double valorSaque){
+    public double saque(double valorSaque){
         return this.saldo- = valorSaque;
     }
 
 
-    public int getSaldo() {
+    public double getSaldo() {
         return saldo;
     }
     
@@ -33,4 +38,9 @@ abstract class Conta {
         return numero;
     }
 
+    @Override
+    public String toString(){
+        return numero + " : " + saldo;
+    }
+    }
 }
