@@ -10,4 +10,15 @@ public class Conta {
         return valorSaque;
     }
 
+    public boolean deposita(double valor) {
+        return false;
+    }
+
+    public int getconta() {
+        return 0;
+    }
+
+   
+    
+
 }

@@ -26,13 +26,17 @@ public class AppConta {
            System.out.println(" 1 . Criar Conta Corrente ");
            System.out.println(" 2 . Criar Conta Especial ");
            System.out.println(" 3 . Consultar Conta Cadastrada ");
-           System.out.println(" 4 . Encerrar Operação "); 
+           System.out.println(" 5 . Depositar "); 
+           System.out.println(" 6 . Sacar "); 
+           System.out.println(" 5 . Encerrar a Operação "); 
         
         
         
         entradaDigitada = teclado.nextLine();
         opcao = Integer.parseInt(entradaDigitada);
 
+        double valor;
+        int conta;
         switch(opcao){
 
         case 1:
@@ -62,17 +66,33 @@ public class AppConta {
                 break;
 
         case 3:
-        System.out.println("Digite o numero de busca");
+        System.out.println("Digite o Numero de Busca da  Conta");
          entradaDigitada = teclado.nextLine();
          numero = Integer.parseInt(entradaDigitada);
          System.out.println(contas.exibir(numero));
          
         case 4:
+         System.out.println("Digite o valor do Deposito");
+         valor = teclado.nextDouble();
+         System.out.println("Digite o numero da conta");
+         conta = teclado.nextInt();
+         contas.deposita(conta, valor);
+         break;
+
+        case 5:
+        System.out.println("Digite o valor do Saque");
+        valor = teclado.nextDouble();
+        System.out.println("Digite a conta a ser Debitada");
+        conta = teclado.nextInt();
+        contas.deposita(conta,valor);
+        break;    
+
+        case 6:
         System.out.println("Operação Finalizada");
         break;
 
         default:
-        System.out.println("Opção incorreta");
+        System.out.println("Opção Incorreta");
         break; 
         
             }

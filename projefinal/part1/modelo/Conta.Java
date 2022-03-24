@@ -13,6 +13,23 @@ abstract class Conta {
         this.saldo = saldo;
     }
 
+    public boolean deposita(double valor){
+        if (valor <0){
+            return false;
+        }
+        this.saldo += valor;
+        return true;
+    }
+
+    public boolean saca(double valor){
+        if (valor <0){
+            return false;
+        } else{
+            this.saldo -= valor;
+            return true;
+        }
+    }
+
 
     public void mostrarDados(){
         System.out.println(numero + " " + saldo);
